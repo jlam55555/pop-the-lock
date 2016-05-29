@@ -26,7 +26,7 @@ $(function() {
 		// angle is between -180 (bottom) and 180 (bottom), going clockwise
 		return angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
 	};
-	$(document).keydown(function() {
+	$(document).keydown(function(event) {
 		if(event.which != 32)
 			return;
 		var currentAngle = getAngle(spinner.css("transform"));
